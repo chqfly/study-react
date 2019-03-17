@@ -10,6 +10,7 @@ import Nav from '../components/Nav';
 import ParentChildLifeCycle from '../components/ParentChildLifeCycle';
 import Context from '../components/Context';
 import TestState from '../components/TestState';
+import TestState2 from '../components/TestState2';
 
 export default function routerConfig() {
     return (
@@ -21,6 +22,7 @@ export default function routerConfig() {
                 <Route path="/parent-child-lifeCycle" component={ParentChildLifeCycle} />
                 <Route path="/context" component={Context} />
                 <Route path="/testState" component={TestState} />
+                <Route path="/testState2" component={TestState2} />
             </div>
         </BrowserRouter>
     );

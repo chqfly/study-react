@@ -21,6 +21,10 @@ const navConfig = [
     {
         to: 'testState',
         name: 'testState'
+    },
+    {
+        to: 'testState2',
+        name: 'testState2'
     }
 ]
 export default function Nav() {
