@@ -29,15 +29,6 @@ class Header extends Component {
         })
     }
 
-    componentWillMount() {
-
-        console.log('我是组件初始化的时候执行，componentWillMount');
-    }
-
-    componentDidMount() {
-        console.log('我是组件初始化的时候执行，componentDidMount');
-    }
-
     componentWillReceiveProps() {
         console.log('我是组件props更新时执行，componentWillReceiveProps');
     }
@@ -45,8 +36,17 @@ class Header extends Component {
     shouldComponentUpdate(nextProps,nextState) {
         
         const isUpdate = !is(fromJS(this.props), fromJS(nextProps)) || !is(fromJS(this.state), fromJS(nextState));
-        console.log(isUpdate);
+        console.log(isUpdate, '执行shouldComponentUpdate');
         return isUpdate;
+    }
+
+    componentWillMount() {
+
+        console.log('我是组件初始化的时候执行，componentWillMount');
+    }
+
+    componentDidMount() {
+        console.log('我是组件初始化的时候执行，componentDidMount');
     }
 
     componentWillUpdate() {

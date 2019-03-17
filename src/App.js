@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import Header from './components/Header.js'
-import Select from './components/Select.js'
+// import Header from './components/Header.js'
+import RouterConfig from './router'
 
 class App extends Component {
 
@@ -11,7 +11,8 @@ class App extends Component {
         super(props);
         this.state = {
             headerName: 'headerName'
-        }
+        };
+
         this.changeHeaderName = this.changeHeaderName.bind(this);
     }
 
@@ -22,19 +23,25 @@ class App extends Component {
         })
     }
 
+    componentDidMount() {
+
+      const headerDom = this.myRef;
+      console.log(headerDom)
+    }
+
     render() {
         return (
-        <div className="App">
+            <div className="App">
 
-            <Header headerName={this.state.headerName} />
+                {/* <Header headerName={this.state.headerName} /> */}
 
-            <header className="App-header" onClick={this.changeHeaderName}>
-                <img src={logo} className="App-logo" alt="logo" />
-                <h1 className="App-title">Welcome to React</h1>
-            </header>
-           
-            <Select/>
-        </div>
+                <header ref={(input) => this.myRef = input} className="App-header" onClick={this.changeHeaderName}>
+                    <img src={logo} className="App-logo" alt="logo" />
+                    <h1 className="App-title">Welcome to React</h1>
+                </header>
+                
+                <RouterConfig />
+            </div>
         );
     }
 }
