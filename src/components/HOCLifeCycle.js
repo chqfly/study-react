@@ -28,7 +28,11 @@ export default function HOCLifeCycle(WrapedComponent) {
         componentDidUpdate() {
             log('componentDidUpdate');
         }
+        componentWillUnmount() {
+            log('componentWillUnmount')
+        }
         render() {
+            log('render');
             return (
                 <WrapedComponent />
             )
