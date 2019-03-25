@@ -25,7 +25,19 @@ const navConfig = [
     {
         to: 'testState2',
         name: 'testState2'
-    }
+    },
+    {
+        to: 'showWindowWidth',
+        name: 'showWindowWidth'
+    },
+    {
+        to: 'useSelect',
+        name: 'useSelect'
+    },
+    {
+        to: 'useMemo',
+        name: 'useMemo'
+    },
 ]
 export default function Nav() {
     return (

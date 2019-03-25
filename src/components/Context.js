@@ -41,9 +41,6 @@ const EnhanceContextChildren3 = HOCLifeCycle(ContextChildren3);
 
 
 class ContextMiddle extends Component {
-    constructor(props) {
-        super(props);
-    }
     render() {
         return (
             <div>

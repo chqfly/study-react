@@ -1,6 +1,5 @@
 import React, { Component }from 'react';
 
-let renderCount = 0;
 class TestComponent2 extends Component {
     constructor(props) {
         super(props)
